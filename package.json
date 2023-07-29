@@ -4,7 +4,9 @@
   "description": "* Jason Porras\r * Bryan Monge\r * Randy Luna\r * Víctor Peña",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch styles/sass:styles/css"
+    "sass": "sass --watch styles/sass:styles/css",
+    "lint": "eslint --fix . --ext .js",
+    "format": "prettier js --write"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/Wiktor124/proyecto1-hoteles-final-lll/issues"
   },
-  "homepage": "https://github.com/Wiktor124/proyecto1-hoteles-final-lll#readme"
+  "homepage": "https://github.com/Wiktor124/proyecto1-hoteles-final-lll#readme",
+  "devDependencies": {
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^8.9.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.0"
+  }
 }
