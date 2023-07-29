@@ -1,8 +1,8 @@
 {
-  "name": "proyecto1-hoteles-final-lll",
+  "name": "plants",
   "version": "1.0.0",
-  "description": "* Jason Porras\r * Bryan Monge\r * Randy Luna\r * Víctor Peña",
-  "main": "index.js",
+  "description": "* Jason Porras\r * Víctor Peña",
+  "main": "main.js",
   "scripts": {
     "sass": "sass --watch styles/sass:styles/css",
     "lint": "eslint --fix . --ext .js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Wiktor124/proyecto1-hoteles-final-lll.git"
+    "url": "git+https://github.com/Wiktor124/plants.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Wiktor124/proyecto1-hoteles-final-lll/issues"
+    "url": "https://github.com/Wiktor124/plants/issues"
   },
-  "homepage": "https://github.com/Wiktor124/proyecto1-hoteles-final-lll#readme",
+  "homepage": "https://github.com/Wiktor124/plants#readme",
   "devDependencies": {
     "eslint": "^8.46.0",
     "eslint-config-prettier": "^8.9.0",
