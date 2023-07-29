@@ -1,7 +1,7 @@
 # To run this project
 
 1. Dependencies
-* npm install
+`npm install`
 2. Linter
 * npm run lint
 3. Formatter
