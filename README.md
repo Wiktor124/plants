@@ -3,8 +3,8 @@
 1. Dependencies
  - `npm install`
 2. Linter
-* npm run lint
+- `npm run lint`
 3. Formatter
-* npm run format
+- `npm run format`
 4. Modify styles
-*  npm run sass
+- `npm run sass`
