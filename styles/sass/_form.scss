@@ -1,8 +1,3 @@
-// Variables
-$gray: #808080;
-$white: #ffffff;
-$purple: #800080;
-
 // Estilos para form y inputs
 .container {
 	max-width: 1270px;
@@ -97,7 +92,7 @@ $purple: #800080;
 	top: 0.53em;
 	left: 0.065em;
 	font-size: 1.2em;
-	color: #cb22ed;
+	color: $purple;
 	line-height: 0;
 	transition: all 0.2s;
 }
@@ -116,59 +111,37 @@ $purple: #800080;
 [type='checkbox']:checked + label:before {
 	box-shadow:
 		inset 0 1px 3px rgba(0, 0, 0, 0.1),
-		0 0 0 6px rgba(203, 34, 237, 0.2);
+		0 0 0 6px rgba(156, 34, 237, 0.2);
 }
 
 //buttons
+.style-input {
+  position: relative;
+  display: inline-block;
+  padding: 13px 30px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: $purple;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid $purple;
+  border-radius: 7px;
+  box-shadow: inset 0 0 0 0 $purple;
+  
+  &:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 $purple;
+  }
+  
+  &:active {
+    transform: scale(0.9);
+  }
+}
 
-.custom-btn {
-	width: 130px;
-	height: 40px;
-	color: #fff;
-	border-radius: 5px;
-	padding: 10px 25px;
-	font-family: 'Lato', sans-serif;
-	font-weight: 500;
-	background: transparent;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	position: relative;
-	display: inline-block;
-	box-shadow:
-		inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-		7px 7px 20px 0px rgba(0, 0, 0, 0.1),
-		4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-	outline: none;
-}
-/* 14 */
-.btn {
-	background: rgb(255, 151, 0);
-	border: none;
-	z-index: 1;
-}
-.btn:after {
-	position: absolute;
-	content: '';
-	width: 100%;
-	height: 0;
-	top: 0;
-	left: 0;
-	z-index: -1;
-	border-radius: 5px;
-	background-color: #eaf818;
-	background-image: linear-gradient(315deg, #eaf818 0%, #f6fc9c 74%);
-	box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5) 7px 7px 20px 0px
-		rgba(0, 0, 0, 0.1) 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-	transition: all 0.3s ease;
-}
-.btn:hover {
-	color: #000;
-}
-.btn:hover:after {
-	top: auto;
-	bottom: 0;
-	height: 100%;
-}
-.btn:active {
-	top: 2px;
+.space{
+	margin-right: 25px;
+	margin-bottom: 20px;
 }
