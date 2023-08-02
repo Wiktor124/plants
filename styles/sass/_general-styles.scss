@@ -44,32 +44,3 @@ img {
 	white-space: nowrap;
 	width: 1px;
 }
-
-.container {
-	max-width: 1270px;
-	width: 80%;
-	margin: 0 auto;
-}
-
-.container .container__input label {
-	color: $gray;
-}
-
-.container__buttons,
-.container--questions{
-	margin-top: 40px;
-}
-
-.container__input{
-	margin-top: 20px;
-}
-
-.hola > input{
-color: brown;
-}
-
-
-.container__h2{
-	font-weight: bold;
-}
-
