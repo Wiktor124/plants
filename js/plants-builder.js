@@ -38,7 +38,7 @@ const handleOptions = e => {
       if (elections?.extra_elements) {
         extraElements.push(elections.extra_elements)
 
-        elections.extra_elements = extraElements.length === 1 ? elections.extra_elements : extraElements;
+        elections.extra_elements = extraElements;
       }
     }
   }
