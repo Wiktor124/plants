@@ -81,6 +81,10 @@ img {
 .container__h2 {
   font-weight: bold;
 }
+.container__p {
+  font-weight: bold;
+  color: aqua;
+}
 
 [type=checkbox]:not(:checked),
 [type=checkbox]:checked {

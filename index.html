@@ -1,127 +1,109 @@
-<!doctype html>
+
+
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" , user-scalable="no" />
-	<title>Plant Recommendation Form</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Recommendation Form</title>
 	<link rel="stylesheet" href="./styles/css/styles.css" />
-	<link rel="website icon" type="png" href="" />
-</head>
+	<link rel="website icon" type="png" href="" /></head>
 
 <body class="container">
 	<h2 class="container__h2">Let us find the perfect plant for you</h2>
-	
-	<form class="container__form" id="plantForm">
-		<h2 class="sr-only">Plant Recommendation Form</h2>
 
-		<div class="container--questions">
-			<p>Where will you place your plant?</p>
-			<div class="container__input">
-				<input type="radio" id="inside_indirect" name="placement" value="inside_indirect" required>
-				<label class="radio-label" for="inside_indirect">Inside with some indirect light</label>
-			</div>
+    <form class="container__form" id="plantForm">
+		<p class="sr-only">Plant Recommendation Form</p>
+        <p>Where will you place your plant?</p>
 
-			<div class="container__input">
-				<input type="radio" id="inside_lot_indirect" name="placement" value="inside_lot_indirect" required>
-				<label class="radio-label" for="inside_lot_indirect">Inside with a lot of indirect light</label>
-			</div>
+        <div class="container__input">
+            <input type="radio" id="inside_indirect" name="placement" value="inside_indirect" required>
+            <label class="radio-label" for="inside_indirect">Inside with some indirect light</label>
+        </div>
+        <div class="container__input">
+            <input type="radio" id="inside_lot_indirect" name="placement" value="inside_lot_indirect" required>
+            <label class="radio-label" for="inside_lot_indirect">Inside with a lot of indirect light</label>
+        </div>
+        <div class="container__input">
+            <input type="radio" id="outside" name="placement" value="outside" required>
+            <label class="radio-label" for="outside">Outside</label>
+        </div>
 
-			<div class="container__input">
-				<input type="radio" id="outside" name="placement" value="outside" required>
-				<label class="radio-label" for="outside">Outside</label>
-			</div>
-		</div>
+        <p>Will it receive direct sunlight?</p>
+        <div class="container__input">
+            <input type="radio" id="sunlight_yes" name="sunlight" value="yes" required>
+            <label class="radio-label" for="sunlight_yes">Yes</label>
+        </div>
+        <div class="container__input">
+            <input type="radio" id="sunlight_no" name="sunlight" value="no" required>
+            <label class="radio-label" for="sunlight_no">No</label>
+        </div>
 
-		<div class="container--questions">
-			<p>Will it receive direct sunlight?</p>
-			<div class="container__input">
-				<input type="radio" id="sunlight_yes" name="sunlight" value="yes" required>
-				<label class="radio-label" for="sunlight_yes">Yes</label>
-			</div>
+        <p>Do you have pets (cats or dogs)?</p>
+        <div class="container__input">
+            <input type="radio" id="pets_yes" name="pets" value="yes" required>
+            <label class="radio-label" for="pets_yes">Yes</label>
+        </div>
+        <div class="container__input">
+            <input type="radio" id="pets_no" name="pets" value="no" required>
+            <label class="radio-label" for="pets_no">No</label>
+        </div>
 
-			<div class="container__input">
-				<input type="radio" id="sunlight_no" name="sunlight" value="no" required>
-				<label class="radio-label" for="sunlight_no">No</label>
-			</div>
-		</div>
+        <p>Do you tend to overwater or underwater?</p>
+        <div class="container__input">
+            <input type="radio" id="watering_overwater" name="watering" value="overwater" required>
+            <label class="radio-label" for="watering_overwater">Overwater</label>
+        </div>
+        <div class="container__input">
+            <input type="radio" id="watering_underwater" name="watering" value="underwater" required>
+            <label class="radio-label" for="watering_underwater">Underwater</label>
+        </div>
+        <div class="container__input">
+            <input type="radio" id="watering_neither" name="watering" value="neither" required>
+            <label class="radio-label" for="watering_neither">Neither / I don't know</label>
+        </div>
 
-		<div class="container--questions">
-			<p>Do you have pets (cats or dogs)?</p>
-			<div class="container__input">
-				<input type="radio" id="pets_yes" name="pets" value="yes" required>
-				<label class="radio-label" for="pets_yes">Yes</label>
-			</div>
+        <p>How do you define your style?</p>
+        <div class="container__input">
+            <input type="radio" id="style_minimalism" name="style" value="minimalism" required>
+            <label class="radio-label" for="style_minimalism">I like minimalism and material colors</label>
+        </div>
+        <div class="container__input">
+            <input type="radio" id="style_simple_colors" name="style" value="simple_colors" required>
+            <label class="radio-label" for="style_simple_colors">I like some decoration and simple colors</label>
+        </div>
+        <div class="container__input">
+            <input type="radio" id="style_bright_colors" name="style" value="bright_colors" required>
+            <label class="radio-label" for="style_bright_colors">I like a lot of decoration and bright colors</label>
+        </div>
 
-			<div class="container__input">
-				<input type="radio" id="pets_no" name="pets" value="no" required>
-				<label class="radio-label" for="pets_no">No</label>
-			</div>
-		</div>
+        <p>Do you want to add any extra elements to your plant? (optional)</p>
+        <div class="container__input">
+            <input type="checkbox" id="extra_moss_pole" name="extra_elements" value="moss_pole">
+            <label class="radio-label" for="extra_moss_pole">Moss pole</label>
+        </div>
+        <div class="container__input">
+            <input type="checkbox" id="extra_pebbles" name="extra_elements" value="pebbles">
+            <label class="radio-label" for="extra_pebbles">Pebbles</label>
+        </div>
+        <div class="container__input">
+            <input type="checkbox" id="extra_smaller_plants" name="extra_elements" value="smaller_plants">
+            <label class="radio-label" for="extra_smaller_plants">Smaller plants</label>
+        </div>
 
-		<div class="container--questions">
-			<p>Do you tend to overwater or underwater?</p>
-			<div class="container__input">
-				<input type="radio" id="watering_overwater" name="watering" value="overwater" required>
-				<label class="radio-label" for="watering_overwater">Overwater</label>
-			</div>
+        <div class="container__buttons">
+            <input class="style-input space" type="submit" value="Get your plant!">
+            <input class="style-input" type="reset" value="Clear">
+        </div>
+    </form>
 
-			<div class="container__input">
-				<input type="radio" id="watering_underwater" name="watering" value="underwater" required>
-				<label class="radio-label" for="watering_underwater">Underwater</label>
-			</div>
-
-			<div class="container__input">
-				<input type="radio" id="watering_neither" name="watering" value="neither" required>
-				<label class="radio-label" for="watering_neither">Neither / I don't know</label>
-			</div>
-		</div>
-
-		<div class="container--questions">
-			<p>How do you define your style?</p>
-			<div class="container__input">
-				<input type="radio" id="style_minimalism" name="style" value="minimalism" required>
-				<label class="radio-label" for="style_minimalism">I like minimalism and material colors</label>
-			</div>
-
-			<div class="container__input">
-				<input type="radio" id="style_simple_colors" name="style" value="simple_colors" required>
-				<label class="radio-label" for="style_simple_colors">I like some decoration and simple colors</label>
-			</div>
-
-			<div class="container__input">
-				<input type="radio" id="style_bright_colors" name="style" value="bright_colors" required>
-				<label class="radio-label" for="style_bright_colors">I like a lot of decoration and bright colors</label>
-			</div>
-		</div>
-
-		<div class="container--questions">
-			<p>Do you want to add any extra elements to your plant? (optional)</p>
-			<div class="container__input">
-				<input type="checkbox" id="extra_moss_pole" name="extra_elements" value="moss_pole">
-				<label class="radio-label" for="extra_moss_pole">Moss pole</label>
-			</div>
-
-			<div class="container__input">
-				<input type="checkbox" id="extra_pebbles" name="extra_elements" value="pebbles">
-				<label class="radio-label" for="extra_pebbles">Pebbles</label>
-			</div>
-
-			<div class="container__input">
-				<input type="checkbox" id="extra_smaller_plants" name="extra_elements" value="smaller_plants">
-				<label class="radio-label" for="extra_smaller_plants">Smaller plants</label>
-			</div>
-		</div>
-
-		<div class="container__buttons">
-			<input class="style-input space" type="submit" value="Get your plant!">
-			<input class="style-input" type="reset" value="Clear">
-		</div>
-	</form>
+    <div id="card">
+        <!-- Contenido de la tarjeta aquí -->
+    </div>
+	<script src="./js/main.js" type="module"></script>
 </body>
-
-</html>
-<script src="./js/main.js" type="module"></script>
 
 </html>
