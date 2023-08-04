@@ -23,15 +23,23 @@ let elections;
 const handleOptions = e => {
   e.preventDefault();
   const plant = new PlantsBuilder();
+  const methods = [];
+  const extraElements = [];
 
   for (let i = 0; i < plantsForm.length; i++) {
     if (plantsForm[i].checked) {
-      const attributes = [];
-      attributes.push(plantsForm[i].name);
 
-      attributes.forEach(attr => plant.addAttribute(attr));
+      methods.push(plantsForm[i].name);
+
+      methods.forEach(attr => plant.addAttribute(attr));
 
       elections = plant[plantsForm[i].name](plantsForm[i].value).build();
+
+      if (elections?.extra_elements) {
+        extraElements.push(elections.extra_elements)
+
+        elections.extra_elements = extraElements.length === 1 ? elections.extra_elements : extraElements;
+      }
     }
   }
 
