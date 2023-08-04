@@ -116,32 +116,32 @@
 
 //buttons
 .style-input {
-  position: relative;
-  display: inline-block;
-  padding: 13px 30px;
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  color: $purple;
-  background: transparent;
-  cursor: pointer;
-  transition: ease-out 0.5s;
-  border: 2px solid $purple;
-  border-radius: 7px;
-  box-shadow: inset 0 0 0 0 $purple;
-  
-  &:hover {
-    color: white;
-    box-shadow: inset 0 -100px 0 0 $purple;
-  }
-  
-  &:active {
-    transform: scale(0.9);
-  }
+	position: relative;
+	display: inline-block;
+	padding: 13px 30px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+	color: $purple;
+	background: transparent;
+	cursor: pointer;
+	transition: ease-out 0.5s;
+	border: 2px solid $purple;
+	border-radius: 7px;
+	box-shadow: inset 0 0 0 0 $purple;
+
+	&:hover {
+		color: white;
+		box-shadow: inset 0 -100px 0 0 $purple;
+	}
+
+	&:active {
+		transform: scale(0.9);
+	}
 }
 
-.space{
+.space {
 	margin-right: 25px;
 	margin-bottom: 20px;
 }
