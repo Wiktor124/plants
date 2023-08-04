@@ -1,3 +1,3 @@
-import initPlantsBuilder from './plants.js';
+import initPlantsBuilder from './plants-builder.js';
 
 initPlantsBuilder();
