@@ -23,6 +23,7 @@ class PlantsBuilder {
     return this.plant;
   }
 }
+//"hola"
 
 function printPlantData(plantConfig) {
   const card = document.getElementById('card');
