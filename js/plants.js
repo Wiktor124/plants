@@ -1,4 +1,4 @@
-// main.js
+
 class PlantsBuilder {
   constructor() {
     this.plant = {};
