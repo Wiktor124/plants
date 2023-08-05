@@ -1,7 +1,6 @@
 import PlantsBuilder from '../plants-builder.js';
-import getPlantData from '../components/plant.-card.js';
+import plantElection from './plants-elections.js';
 const plantsForm = [...document.querySelector('#plantForm')];
-
 
 let elections;
 const handleOptions = e => {
@@ -26,13 +25,13 @@ const handleOptions = e => {
     }
   }
 
-  getPlantData(elections);
+  plantElection(elections);
 };
 
-function initPlantsBuilder() {
+function init() {
   document
     .querySelector('#plantForm')
     .addEventListener('submit', handleOptions);
 }
 
-export default initPlantsBuilder;
+export default init;
