@@ -39,6 +39,7 @@ img {
 
 .sr-only {
   clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
   clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
@@ -52,13 +53,16 @@ img {
   width: 80%;
   margin: 0 auto;
 }
+
 .container__input {
   margin-top: 20px;
 }
+
 .container__input input[type=radio] {
   position: absolute;
   opacity: 0;
 }
+
 .container__input input[type=radio] + .radio-label:before {
   content: "";
   background-color: #fff;
@@ -73,16 +77,20 @@ img {
   text-align: center;
   transition: all 250ms ease;
 }
+
 .container__input input[type=radio]:checked + .radio-label:before {
   background-color: #725ac1;
   box-shadow: inset 0 0 0 4px #fff;
 }
+
 .container__buttons, .container--questions {
   margin-top: 40px;
 }
+
 .container__input label {
   color: #928f8f;
 }
+
 .container__h2 {
   font-weight: bold;
 }
@@ -158,10 +166,12 @@ img {
   border-radius: 7px;
   box-shadow: inset 0 0 0 0 #725ac1;
 }
+
 .style-input:hover {
   color: white;
   box-shadow: inset 0 -100px 0 0 #725ac1;
 }
+
 .style-input:active {
   transform: scale(0.9);
 }
@@ -173,27 +183,23 @@ img {
 
 .container-card-plants {
   background-color: #725ac1;
-  height: 80%;
+  height: 74%;
   width: 70%;
   border-radius: 8px;
-}
-
-.p-card, .title-plant {
-  color: #fff;
-  text-align: center;
 }
 
 .plant {
   position: relative;
   max-width: 397px;
-  top: 10px;
+  top: 70px;
   left: 23px;
   border: 2px solid rgb(114, 90, 193);
   background-color: rgb(255, 255, 255);
   height: 528px;
 }
+
 .plant img {
   position: absolute;
-}
+} 
 
 /*# sourceMappingURL=styles.css.map */
