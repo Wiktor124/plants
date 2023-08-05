@@ -1,5 +1,6 @@
 import PlantsBuilder from '../plants-builder.js';
 import getPlantData from '../components/plant.-card.js';
+import { renderCard } from '../components/renderCardPlant.js';
 const plantsForm = [...document.querySelector('#plantForm')];
 
 
@@ -26,6 +27,7 @@ const handleOptions = e => {
     }
   }
 
+  renderCard()
   getPlantData(elections);
 };
 
