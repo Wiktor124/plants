@@ -32,6 +32,11 @@ img {
   width: 100%;
 }
 
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .sr-only {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -69,7 +74,7 @@ img {
   transition: all 250ms ease;
 }
 .container__input input[type=radio]:checked + .radio-label:before {
-  background-color: #725AC1;
+  background-color: #725ac1;
   box-shadow: inset 0 0 0 4px #fff;
 }
 .container__buttons, .container--questions {
@@ -118,7 +123,7 @@ img {
   top: 0.53em;
   left: 0.065em;
   font-size: 1.2em;
-  color: #725AC1;
+  color: #725ac1;
   line-height: 0;
   transition: all 0.2s;
 }
@@ -145,17 +150,17 @@ img {
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
-  color: #725AC1;
+  color: #725ac1;
   background: transparent;
   cursor: pointer;
   transition: ease-out 0.5s;
-  border: 2px solid #725AC1;
+  border: 2px solid #725ac1;
   border-radius: 7px;
-  box-shadow: inset 0 0 0 0 #725AC1;
+  box-shadow: inset 0 0 0 0 #725ac1;
 }
 .style-input:hover {
   color: white;
-  box-shadow: inset 0 -100px 0 0 #725AC1;
+  box-shadow: inset 0 -100px 0 0 #725ac1;
 }
 .style-input:active {
   transform: scale(0.9);
@@ -164,6 +169,16 @@ img {
 .space {
   margin-right: 25px;
   margin-bottom: 20px;
+}
+
+.plant {
+  position: relative;
+  max-width: 300px;
+  max-height: 300px;
+  border: 2px solid #725ac1;
+}
+.plant img {
+  position: absolute;
 }
 
 /*# sourceMappingURL=styles.css.map */

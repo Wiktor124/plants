@@ -1,0 +1,10 @@
+.plant {
+	position: relative;
+	max-width: 300px;
+	max-height: 300px;
+	border: 2px solid $purple;
+
+	img {
+		position: absolute;
+	}
+}

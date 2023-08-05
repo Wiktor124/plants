@@ -35,6 +35,11 @@ img {
 	width: 100%;
 }
 
+.main-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
 .sr-only {
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
