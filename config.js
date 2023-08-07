@@ -2,7 +2,7 @@ const plantsQuestions = {
 	placement_question: {
 		inside_indirect: {
 			yes: {
-				nonToxicPlan: 'Boston Fern',
+				nonToxicPlant: 'Boston Fern',
 				image:
 					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692070/samples/plants/plant-fern_cgsdit.png',
 			},
@@ -14,7 +14,7 @@ const plantsQuestions = {
 		},
 		inside_lot_indirect: {
 			yes: {
-				nonToxicPlan: 'Monstera',
+				nonToxicPlant: 'Monstera',
 				image:
 					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692069/samples/plants/plant-monstera_zbntgh.png',
 			},
@@ -26,7 +26,7 @@ const plantsQuestions = {
 		},
 		outside: {
 			yes: {
-				nonToxicPlan: 'Cactus',
+				nonToxicPlant: 'Cactus',
 				image:
 					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692069/samples/plants/plant-cactus_gntwe7.png',
 			},
