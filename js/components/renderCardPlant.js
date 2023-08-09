@@ -1,11 +1,29 @@
 let currentCardContainer = null;
 
+function createInfoContainer(title, content, containerClass, titleClass, contentClass) {
+  const container = document.createElement('div');
+  container.className = containerClass;
+
+  const titleElement = document.createElement('p');
+  titleElement.textContent = title;
+  titleElement.classList.add(titleClass);
+
+  const contentElement = document.createElement('p');
+  contentElement.textContent = content;
+  contentElement.classList.add(contentClass);
+
+  container.appendChild(titleElement);
+  container.appendChild(contentElement);
+
+  return container;
+}
+
 function renderCard() {
   const cardPlantsDiv = document.getElementById('card-plants');
 
   if (!currentCardContainer) {
     currentCardContainer = document.createElement('div');
-    currentCardContainer.classList.add('card-container'); 
+    currentCardContainer.classList.add('card-container');
     cardPlantsDiv.appendChild(currentCardContainer);
   }
 
@@ -13,67 +31,34 @@ function renderCard() {
 
   const textPlants = document.createElement('p');
   textPlants.textContent = 'The perfect plant for you is...';
-  textPlants.classList.add('p-card');
-  
+  textPlants.classList.add('card-container__p');
+
   const tituloPlants = document.createElement('h2');
   tituloPlants.textContent = 'Titulo de planta';
-  tituloPlants.classList.add('title-plant');
-  
+  tituloPlants.classList.add('card-container__title');
+
   const renderPlant = document.createElement('div');
   renderPlant.id = 'plant';
   renderPlant.className = 'plant';
-  
-	const textRecomendation = document.createElement('div');
-  textRecomendation.className = 'textRecomendation';
-  
-  // const namePlant = document.createElement('p');
-  // namePlant.textContent = 'Name : Mostera Deliciosa';
-  // namePlant.classList.add('namePlant');
 
-  // const soilPlant = document.createElement('p');
-  // soilPlant.textContent = 'Soil : Premium fertilized soil';
-  // soilPlant.classList.add('soilPlant');
+  const textRecomendationCard = document.createElement('div');
+  textRecomendationCard.className = 'card-container__textRecomendation';
 
-  // const potPlant = document.createElement('p');
-  // potPlant.textContent = 'Pot : Clay pot with decorations';
-  // potPlant.classList.add('potPlant');
+  currentCardContainer.append(
+    textPlants,
+    tituloPlants,
+    renderPlant,
+    textRecomendationCard
+  );
 
-  // const colorPlant = document.createElement('p');
-  // colorPlant.textContent = 'Color : Clay';
-  // colorPlant.classList.add('colorPlant');
+  const nameContainer = createInfoContainer('Name', 'Mostera Deliciosa', 'card-container__info', 'card-container__info-title', 'card-container__info-name');
+  const soilContainer = createInfoContainer('Soil', 'Premium fertilized soil', 'card-container__info', 'card-container__info-title', 'card-container__info-soil');
+  const potContainer = createInfoContainer('Pot', 'Clay pot with decorations', 'card-container__info', 'card-container__info-title', 'card-container__info-pot');
+  const colorContainer = createInfoContainer('Color', 'Clay', 'card-container__info', 'card-container__info-title', 'card-container__info-color');
+  const extrasContainer = createInfoContainer('Extras', 'Moss pole', 'card-container__info', 'card-container__info-title', 'card-container__info-extras');
 
-  // const extrasPlant = document.createElement('p');
-  // extrasPlant.textContent = 'Extras : Moss pole';
-  // extrasPlant.classList.add('extrasPlant');
-  
-  // currentCardContainer.appendChild(textPlants);
-  // currentCardContainer.appendChild(tituloPlants);
-  // currentCardContainer.appendChild(renderPlant);
-  // currentCardContainer.appendChild(textRecomendation);
-
-  // textRecomendation.appendChild(namePlant);
-  // textRecomendation.appendChild(soilPlant);
-  // textRecomendation.appendChild(potPlant);
-  // textRecomendation.appendChild(colorPlant);
-  // textRecomendation.appendChild(extrasPlant);
-
-	const hola = document.createElement('div');
-  hola.className = 'hola';
-
-  const pato = document.createElement('p');
-  pato.className = 'pato';
-  pato.textContent = 'Pot';
-
-  const vaca = document.createElement('p');
-  vaca.className = 'vaca';
-  vaca.textContent = 'Clay pot with decorations';
-
-   
-  hola.appendChild(pato);
-  hola.appendChild(vaca);
-
-  currentCardContainer.appendChild(textRecomendation);
-  textRecomendation.appendChild(hola);
-  
+  currentCardContainer.appendChild(textRecomendationCard);
+  textRecomendationCard.append(nameContainer, soilContainer, potContainer, colorContainer, extrasContainer);
 }
+
 export { renderCard };

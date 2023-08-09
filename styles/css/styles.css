@@ -171,58 +171,53 @@ img {
   margin-bottom: 20px;
 }
 
-.container-card-plants {
+.card-container {
   background-color: #725ac1;
-  height: 83%;
+  height: 876px;
   width: 448px;
   border-radius: 8px;
+  padding-top: 10px;
 }
-
-.p-card,
-.title-plant {
+.card-container__p, .card-container__title {
   color: #fff;
   text-align: center;
+  height: 20px;
 }
-
-.textRecomendation {
+.card-container__textRecomendation {
   margin-top: 30px;
   height: auto;
   color: #fff;
   font-weight: bold;
-  text-align: center;
 }
-
-.hola {
-  border: 2px solid #000000;
+.card-container__info {
   display: flex;
   width: 100%;
   gap: 1%;
+  height: 35px;
 }
-
-.pato {
-  width: 35%;
+.card-container__info-title {
+  width: 30%;
+  padding-right: 3%;
   text-align: end;
 }
-
-.vaca {
-  width: 60%;
+.card-container__info-name, .card-container__info-soil, .card-container__info-pot, .card-container__info-color, .card-container__info-extras {
+  width: 55%;
   position: relative;
+  padding-left: 5%;
 }
-
-.vaca::before {
+.card-container__info-name::before, .card-container__info-soil::before, .card-container__info-pot::before, .card-container__info-color::before, .card-container__info-extras::before {
   content: "";
   position: absolute;
-  top: -5px; /* Ajusta según necesites para la posición de la línea */
+  top: -8px;
   left: 0;
-  width: 10px;
-  height: 500px; /* Grosor de la línea */
-  background-color: black; /* Color de la línea */
+  width: 2px;
+  height: 36px;
+  background-color: rgb(251, 245, 236);
 }
 
 .plant {
   position: relative;
   max-width: 397px;
-  top: 10px;
   left: 23px;
   border: 2px solid rgb(114, 90, 193);
   background-color: rgb(255, 255, 255);
