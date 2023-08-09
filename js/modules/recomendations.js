@@ -31,15 +31,10 @@ const handleOptions = e => {
 	showCard();
 };
 
-const handleClear = e => {
-	const cardPlants = document.querySelector('#card-plants');
-	cardPlants.style.display = 'none'; 
-};
 
-function showCard() {
-	const cardPlants = document.querySelector('#card-plants');
-	cardPlants.style.display = 'block'; 
-}
+const handleClear = e => {
+	document.querySelector('.card-container').innerHTML = ''; 
+};
 
 function init() {
 	document
