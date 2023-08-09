@@ -28,12 +28,27 @@ const handleOptions = e => {
 
 	renderCard();
 	plantElection(elections);
+	showCard();
 };
+
+const handleClear = e => {
+	const cardPlants = document.querySelector('#card-plants');
+	cardPlants.style.display = 'none'; 
+};
+
+function showCard() {
+	const cardPlants = document.querySelector('#card-plants');
+	cardPlants.style.display = 'block'; 
+}
 
 function init() {
 	document
 		.querySelector('#plantForm')
 		.addEventListener('submit', handleOptions);
+
+		document
+			.querySelector('.deleted')
+			.addEventListener('click', handleClear); 
 }
 
 export default init;
