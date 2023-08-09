@@ -46,10 +46,10 @@ function renderCard() {
   // extrasPlant.textContent = 'Extras : Moss pole';
   // extrasPlant.classList.add('extrasPlant');
   
-  currentCardContainer.appendChild(textPlants);
-  currentCardContainer.appendChild(tituloPlants);
-  currentCardContainer.appendChild(renderPlant);
-  currentCardContainer.appendChild(textRecomendation);
+  // currentCardContainer.appendChild(textPlants);
+  // currentCardContainer.appendChild(tituloPlants);
+  // currentCardContainer.appendChild(renderPlant);
+  // currentCardContainer.appendChild(textRecomendation);
 
   // textRecomendation.appendChild(namePlant);
   // textRecomendation.appendChild(soilPlant);
@@ -60,15 +60,19 @@ function renderCard() {
 	const hola = document.createElement('div');
   hola.className = 'hola';
 
-  const pato document.createElement('p');
+  const pato = document.createElement('p');
   pato.className = 'pato';
+  pato.textContent = 'Pot';
 
-  const vaca document.createElement('strong');
+  const vaca = document.createElement('p');
   vaca.className = 'vaca';
+  vaca.textContent = 'Clay pot with decorations';
 
    
   hola.appendChild(pato);
   hola.appendChild(vaca);
+
+  currentCardContainer.appendChild(textRecomendation);
   textRecomendation.appendChild(hola);
   
 }

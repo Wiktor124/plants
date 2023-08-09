@@ -166,3 +166,31 @@
 	font-weight: bold;
 	text-align: center;
 }
+
+.hola{
+
+	border: 2px solid #000000;
+	display: flex;
+	width: 100%;
+	gap: 1%;
+}
+
+.pato{
+	width: 35%;
+  text-align: end;
+}
+
+.vaca {
+	width: 60%;
+	position: relative;
+}
+
+.vaca::before {
+  content: "";
+  position: absolute;
+  top: -5px; /* Ajusta según necesites para la posición de la línea */
+  left: 0;
+  width: 10px;
+  height: 500px; /* Grosor de la línea */
+  background-color: black; /* Color de la línea */
+}
