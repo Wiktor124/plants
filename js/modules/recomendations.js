@@ -28,12 +28,10 @@ const handleOptions = e => {
 
 	renderCard();
 	plantElection(elections);
-	showCard();
 };
 
-
-const handleClear = e => {
-	document.querySelector('.card-container').innerHTML = ''; 
+const handleClear = () => {
+	document.querySelector('.card-container').innerHTML = '';
 };
 
 function init() {
@@ -41,9 +39,9 @@ function init() {
 		.querySelector('#plantForm')
 		.addEventListener('submit', handleOptions);
 
-		document
-			.querySelector('.deleted')
-			.addEventListener('click', handleClear); 
+	document
+		.querySelector('.deleted')
+		.addEventListener('click', handleClear);
 }
 
 export default init;

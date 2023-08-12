@@ -18,7 +18,7 @@ function createInfoContainer(title, content, containerClass, titleClass, content
   return container;
 }
 
-function renderCard() {
+function renderCard(data = []) {
   const cardPlantsDiv = document.getElementById('card-plants');
 
   if (!currentCardContainer) {
@@ -51,12 +51,16 @@ function renderCard() {
     textRecomendationCard
   );
 
-  const nameContainer = createInfoContainer('Name', 'Mostera Deliciosa', 'card-container__info', 'card-container__info-title', 'card-container__info-name');
-  const soilContainer = createInfoContainer('Soil', 'Premium fertilized soil', 'card-container__info', 'card-container__info-title', 'card-container__info-soil');
-  const potContainer = createInfoContainer('Pot', 'Clay pot with decorations', 'card-container__info', 'card-container__info-title', 'card-container__info-pot');
+  const nameContainer = createInfoContainer('Name', data[2]?.plant, 'card-container__info', 'card-container__info-title', 'card-container__info-name');
+  const soilContainer = createInfoContainer('Soil', data[1]?.soil, 'card-container__info', 'card-container__info-title', 'card-container__info-soil');
+  const potContainer = createInfoContainer('Pot', data[0]?.pot, 'card-container__info', 'card-container__info-title', 'card-container__info-pot');
   const colorContainer = createInfoContainer('Color', 'Clay', 'card-container__info', 'card-container__info-title', 'card-container__info-color');
-  const extrasContainer = createInfoContainer('Extras', 'Moss pole', 'card-container__info', 'card-container__info-title', 'card-container__info-extras');
 
+  let extrasContainer;
+  const extrasArr = data.slice(3);
+
+  const extra = extrasArr.length > 0 ? extrasArr?.map(item => item.extra).join(', ') : 'No extras';
+  extrasContainer = createInfoContainer('Extras', extra, 'card-container__info', 'card-container__info-title', 'card-container__info-extras');
   currentCardContainer.appendChild(textRecomendationCard);
   textRecomendationCard.append(nameContainer, soilContainer, potContainer, colorContainer, extrasContainer);
 }

@@ -2,36 +2,36 @@ const plantsQuestions = {
 	placement_question: {
 		inside_indirect: {
 			yes: {
-				nonToxicPlant: 'Boston Fern',
+				plant: 'Boston Fern',
 				image:
 					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692070/samples/plants/plant-fern_cgsdit.png',
 			},
 			no: {
-				toxicPlant: 'Sansevieria',
+				plant: 'Sansevieria',
 				image:
 					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692068/samples/plants/plant-sansevieria_mnhug8.png',
 			},
 		},
 		inside_lot_indirect: {
 			yes: {
-				nonToxicPlant: 'Monstera',
+				plant: 'Monstera',
 				image:
 					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692069/samples/plants/plant-monstera_zbntgh.png',
 			},
 			no: {
-				toxicPlant: 'Aglaonema',
+				plant: 'Aglaonema',
 				image:
 					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692069/samples/plants/plant-aglaonema_gpsqr7.png',
 			},
 		},
 		outside: {
 			yes: {
-				nonToxicPlant: 'Cactus',
+				plant: 'Cactus',
 				image:
 					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692069/samples/plants/plant-cactus_gntwe7.png',
 			},
 			no: {
-				toxicPlant: 'Aloe Vera',
+				plant: 'Aloe Vera',
 				image:
 					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692069/samples/plants/plant-aloe_p4dp47.png',
 			},
