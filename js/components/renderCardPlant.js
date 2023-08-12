@@ -41,6 +41,8 @@ function renderCard(data = []) {
   renderPlant.id = 'plant';
   renderPlant.className = 'plant';
 
+  renderPlant.innerHTML = data.map(({ image }) => `<img src="${image}" alt="">`).join('');
+
   const textRecomendationCard = document.createElement('div');
   textRecomendationCard.className = 'card-container__textRecomendation';
 
