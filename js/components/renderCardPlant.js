@@ -72,7 +72,7 @@ function renderCard(data = []) {
 
   const customEnlace = document.createElement('a');
   customEnlace.textContent = 'Customize';
-  customEnlace.href = '';
+  customEnlace.href = '././customize.html';
   customEnlace.classList.add("customEnlace");
 
   containerCustomBtn.appendChild(customBtn,)

@@ -201,3 +201,17 @@
 		}
 	}
 }
+
+button.style-input {
+	margin-top: 70px;
+}
+
+.containerCustomBtn {
+	display: flex;
+	justify-content: center;
+	color: $purple;
+}
+
+.containerCustomBtn a:hover {
+	color: $white;
+}

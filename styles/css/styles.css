@@ -215,6 +215,20 @@ img {
   background-color: rgb(251, 245, 236);
 }
 
+button.style-input {
+  margin-top: 70px;
+}
+
+.containerCustomBtn {
+  display: flex;
+  justify-content: center;
+  color: #725ac1;
+}
+
+.containerCustomBtn a:hover {
+  color: #fff;
+}
+
 .plant {
   position: relative;
   max-width: 397px;
