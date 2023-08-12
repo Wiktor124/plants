@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,7 +8,6 @@
   <link rel="stylesheet" href="./styles/css/styles.css" />
   <link rel="website icon" type="png" href="" />
 </head>
-
 <body class="container">
   <h2 class="container__h2">Customize your plant!</h2>
   <h3 class="container__h3">Choose your pot:</h3>
@@ -20,11 +18,11 @@
         <p class="height-null">Pot material</p>
         <div class="container-option">
           <div class="container__input lateral-space">
-            <input type="radio" id="clay" required>
+            <input type="radio" id="clay" name="material" required>
             <label class="radio-label" for="clay">Clay</label>
           </div>
           <div class="container__input lateral-space">
-            <input type="radio" id="ceramic" required>
+            <input type="radio" id="ceramic" name="material" required>
             <label class="radio-label" for="ceramic">Ceramic</label>
           </div>
         </div>
@@ -37,20 +35,79 @@
         </label>
       </div>
       <div class="top-space">
-        <p>Pot :</p>
+        <p>Pot color:</p>
         <label class="switch">
-          <input type="checkbox">
+          <input type="checkbox" data-container="container-colors">
           <span class="slider"></span>
         </label>
+        <div id="container-colors" class="container-colors container-option">
+          <div class="container__input blue">
+            <input type="radio" id="blue" name="colors" required>
+            <label class="radio-label" for="blue"></label>
+          </div>
+          <div class="container__input">
+            <input type="radio" id="red" name="colors" required>
+            <label class="radio-label" for="red"></label>
+          </div>
+          <div class="container__input">
+            <input type="radio" id="green" name="colors" required>
+            <label class="radio-label" for="green"></label>
+          </div>
+          <div class="container__input">
+            <input type="radio" id="purple" name="colors" required>
+            <label class="radio-label" for="purple"></label>
+          </div>
+        </div>
       </div>
-
+      <div class="container--">
+        <h3>Choose your soil:</h3>
+        <div class="container__input">
+          <input type="radio" id="basic_soil" name="soil" required>
+          <label class="radio-label" for="basic_soil">Basic Composted soil</label>
+        </div>
+        <div class="container__input">
+          <input type="radio" id="premium_soli" name="soil" required>
+          <label class="radio-label" for="premium_soli">Premium fertilized soil</label>
+        </div>
+        <div class="container__input">
+          <input type="radio" id="easy_soil" name="soil" required>
+          <label class="radio-label" for="easy_soil">Esay drainage soil</label>
+        </div>
+      </div>
+      <div class="custom-dropdown botton-space">
+        <h3>Choose your plant:</h3>
+        <select>
+          <option>Aglaonema Silver Bay</option>
+          <option>Aloe Vera</option>
+          <option>Boston Fern</option>
+          <option>Cactus</option>
+          <option>Monstera Deliciosa</option>
+          <option>Peace Lily</option>
+          <option>Sansevieria</option>
+        </select>
+        </span>
+      </div>
+      <div class="botton-space">
+        <h3> Choose your Extras:</h3>
+        <div class="container__input">
+          <input type="checkbox" id="extra_moss_pole" name="extra_elements" value="moss_pole">
+          <label class="radio-label" for="extra_moss_pole">Moss pole</label>
+        </div>
+        <div class="container__input">
+          <input type="checkbox" id="extra_pebbles" name="extra_elements" value="pebbles">
+          <label class="radio-label" for="extra_pebbles">Pebbles</label>
+        </div>
+        <div class="container__input">
+          <input type="checkbox" id="extra_smaller_plants" name="extra_elements" value="smaller_plants">
+          <label class="radio-label" for="extra_smaller_plants">Smaller plants</label>
+        </div>
+      </div>
     </form>
     <div id="card-plants" class="container-card-plants"></div>
   </main>
-
 </body>
 
 </html>
-<script src="./js/main.js" type="module"></script>
+<script src="./js/customize.js" type="module"></script>
 
 </html>

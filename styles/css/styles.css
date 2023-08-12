@@ -51,6 +51,7 @@ img {
   max-width: 1270px;
   width: 80%;
   margin: 0 auto;
+  margin-top: -70px;
 }
 .container__input {
   margin-top: 20px;
@@ -217,6 +218,7 @@ img {
 
 button.style-input {
   margin-top: 70px;
+  margin-bottom: 50px;
 }
 
 .containerCustomBtn {
@@ -254,61 +256,106 @@ button.style-input {
   margin-top: 40px;
 }
 
+.botton-space {
+  margin-bottom: 150px;
+}
+
 .height-null {
   height: 0;
 }
 
-/* The switch - the box around the slider */
 .switch {
-  font-size: 7px;
+  font-size: 10px;
   position: relative;
   display: inline-block;
-  width: 40px;
-  height: 18px;
+  width: 3.5em;
+  height: 2.09em;
 }
 
-/* Hide default HTML checkbox */
 .switch input {
-  opacity: 1;
+  opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* The slider */
 .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0px;
-  background: #fff;
+  bottom: 0;
+  background-color: #fff;
+  border: 1px solid #adb5bd;
   transition: 0.4s;
   border-radius: 30px;
-  border: 1px solid #ccc;
 }
 
 .slider:before {
   position: absolute;
-  content: "";
-  height: 2.2em;
-  width: 2.2em;
-  border-radius: 16px;
-  left: 1.2px;
-  top: 0;
-  bottom: 0;
-  background-color: white;
-  box-shadow: 0 2px 5px #999999;
+  content: "no";
+  height: 1.5em;
+  text-align: center;
+  font-size: 12px;
+  width: 1.5em;
+  border-radius: 20px;
+  top: 0.04em;
+  left: 0.1em;
+  background-color: #adb5bd;
   transition: 0.4s;
 }
 
 input:checked + .slider {
   background-color: #725ac1;
-  border: 1px solid transparent;
+  border: 1px solid #725ac1;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #725ac1;
 }
 
 input:checked + .slider:before {
-  transform: translateX(3.1em);
+  content: "si";
+  transform: translateX(1.1em);
+  background-color: #fff;
+}
+
+.container-colors {
+  margin-top: 10px;
+  display: none;
+}
+
+.custom-dropdown select {
+  background-color: #725ac1;
+  color: #fff;
+  font-size: inherit;
+  padding: 0.5em;
+  padding-right: 2.5em;
+  border: 0;
+  margin: 0;
+  border-radius: 3px;
+  text-indent: 0.01px;
+  text-overflow: "";
+}
+
+#blue + .radio-label:before,
+#blue:checked + .radio-label:before {
+  background-color: blue;
+}
+
+#red + .radio-label:before,
+#red:checked + .radio-label:before {
+  background-color: red;
+}
+
+#green + .radio-label:before,
+#green:checked + .radio-label:before {
+  background-color: green;
+}
+
+#purple + .radio-label:before,
+#purple:checked + .radio-label:before {
+  background-color: purple;
 }
 
 /*# sourceMappingURL=styles.css.map */

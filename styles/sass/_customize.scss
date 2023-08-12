@@ -1,70 +1,113 @@
-.container-option{
-  display: flex;
+.container-option {
+	display: flex;
 }
 
-.lateral-space{
-  margin-right: 60px;
+.lateral-space {
+	margin-right: 60px;
 }
 
-.top-space{
-  margin-top: 40px;
+.top-space {
+	margin-top: 40px;
 }
 
-.height-null{
-  height: 0;
+.botton-space {
+	margin-bottom: 150px;
 }
 
-/* The switch - the box around the slider */
+.height-null {
+	height: 0;
+}
+
 .switch {
-  font-size: 7px;
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 18px;
- }
- 
- /* Hide default HTML checkbox */
- .switch input {
-  opacity: 1;
-  width: 0;
-  height: 0;
- }
- 
- /* The slider */
- .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  background: #fff;
-  transition: .4s;
-  border-radius: 30px;
-  border: 1px solid #ccc;
- }
- 
- .slider:before {
-  position: absolute;
-  content: "";
-  height: 2.2em;
-  width: 2.2em;
-  border-radius: 16px;
-  left: 1.2px;
-  top: 0;
-  bottom: 0;
-  background-color: white;
-  box-shadow: 0 2px 5px #999999;
-  transition: .4s;
- }
- 
- input:checked + .slider {
-  background-color: $purple;
-  border: 1px solid transparent;
- }
- 
- input:checked + .slider:before {
-  transform: translateX(3.1em);
- }
+	font-size: 10px;
+	position: relative;
+	display: inline-block;
+	width: 3.5em;
+	height: 2.09em;
+}
 
- 
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: $white;
+	border: 1px solid #adb5bd;
+	transition: 0.4s;
+	border-radius: 30px;
+}
+
+.slider:before {
+	position: absolute;
+	content: 'no';
+	height: 1.5em;
+	text-align: center;
+	font-size: 12px;
+	width: 1.5em;
+	border-radius: 20px;
+	top: 0.04em;
+	left: 0.1em;
+	background-color: #adb5bd;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: $purple;
+	border: 1px solid $purple;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px $purple;
+}
+
+input:checked + .slider:before {
+	content: 'si';
+	transform: translateX(1.1em);
+	background-color: #fff;
+}
+
+.container-colors {
+	margin-top: 10px;
+	display: none;
+}
+
+.custom-dropdown select {
+	background-color: $purple;
+	color: $white;
+	font-size: inherit;
+	padding: 0.5em;
+	padding-right: 2.5em;
+	border: 0;
+	margin: 0;
+	border-radius: 3px;
+	text-indent: 0.01px;
+	text-overflow: '';
+}
+
+#blue + .radio-label:before,
+#blue:checked + .radio-label:before {
+	background-color: blue;
+}
+
+#red + .radio-label:before,
+#red:checked + .radio-label:before {
+	background-color: red;
+}
+
+#green + .radio-label:before,
+#green:checked + .radio-label:before {
+	background-color: green;
+}
+
+#purple + .radio-label:before,
+#purple:checked + .radio-label:before {
+	background-color: purple;
+}

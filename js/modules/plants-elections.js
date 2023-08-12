@@ -23,7 +23,7 @@ function plantElection(data) {
 		extra.forEach(item => plantRecomendation.push(extra_elements?.[item]));
 	}
 
-	renderCard(plantRecomendation)
+	renderCard(plantRecomendation);
 	// renderImageRecomendation(plantRecomendation);
 	localStorage.setItem('recomendation', JSON.stringify(plantRecomendation));
 }

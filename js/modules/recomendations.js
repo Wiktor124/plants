@@ -39,9 +39,7 @@ function init() {
 		.querySelector('#plantForm')
 		.addEventListener('submit', handleOptions);
 
-	document
-		.querySelector('.deleted')
-		.addEventListener('click', handleClear);
+	document.querySelector('.deleted').addEventListener('click', handleClear);
 }
 
 export default init;
