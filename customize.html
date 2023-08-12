@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" , user-scalable="no" />
+  <title>Plant Recommendation Form</title>
+  <link rel="stylesheet" href="./styles/css/styles.css" />
+  <link rel="website icon" type="png" href="" />
+</head>
+
+<body class="container">
+  <h2 class="container__h2">Customize your plant!</h2>
+  <h3 class="container__h3">Choose your pot:</h3>
+  <main class="main-container">
+    <form class="container__form">
+      <h2 class="sr-only">Plant Recommendation Form</h2>
+      <div>
+        <p class="height-null">Pot material</p>
+        <div class="container-option">
+          <div class="container__input lateral-space">
+            <input type="radio" id="clay" required>
+            <label class="radio-label" for="clay">Clay</label>
+          </div>
+          <div class="container__input lateral-space">
+            <input type="radio" id="ceramic" required>
+            <label class="radio-label" for="ceramic">Ceramic</label>
+          </div>
+        </div>
+      </div>
+      <div class="top-space">
+        <p>Pot decoration:</p>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="top-space">
+        <p>Pot :</p>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+    </form>
+    <div id="card-plants" class="container-card-plants"></div>
+  </main>
+
+</body>
+
+</html>
+<script src="./js/main.js" type="module"></script>
+
+</html>
