@@ -23,9 +23,9 @@ function createInfoContainer(
 
 	return container;
 }
+const cardPlantsDiv = document.getElementById('card-plants');
 
 function renderCard(data = []) {
-	const cardPlantsDiv = document.getElementById('card-plants');
 
 	if (!currentCardContainer) {
 		currentCardContainer = document.createElement('div');
@@ -33,6 +33,7 @@ function renderCard(data = []) {
 		cardPlantsDiv.appendChild(currentCardContainer);
 	}
 
+	console.log(data);
 	currentCardContainer.innerHTML = '';
 
 	const textPlants = document.createElement('p');
@@ -40,17 +41,15 @@ function renderCard(data = []) {
 	textPlants.classList.add('card-container__p');
 
 	const tituloPlants = document.createElement('h2');
-	tituloPlants.textContent = 'Titulo de planta';
+	tituloPlants.textContent = data[2]?.plant || 'No plant!';
 	tituloPlants.classList.add('card-container__title');
 
 	const renderPlant = document.createElement('div');
 	renderPlant.id = 'plant';
 	renderPlant.className = 'plant';
 
-	renderPlant.innerHTML = data
-		.map(({ image }) => `<img src="${image}" alt="">`)
-		.join('');
-
+	renderPlant.innerHTML = data.length !== 0 ? data.map(({ image }) => `<img src="${image}" alt="">`)
+		.join('') : '<h2 style="text-align: center; margin-top: 200px;">No PLant!</h2>';
 	const textRecomendationCard = document.createElement('div');
 	textRecomendationCard.className = 'card-container__textRecomendation';
 
@@ -63,21 +62,21 @@ function renderCard(data = []) {
 
 	const nameContainer = createInfoContainer(
 		'Name',
-		data[2]?.plant,
+		data[2]?.plant || 'No plant!',
 		'card-container__info',
 		'card-container__info-title',
 		'card-container__info-name',
 	);
 	const soilContainer = createInfoContainer(
 		'Soil',
-		data[1]?.soil,
+		data[1]?.soil || 'No soil!',
 		'card-container__info',
 		'card-container__info-title',
 		'card-container__info-soil',
 	);
 	const potContainer = createInfoContainer(
 		'Pot',
-		data[0]?.pot,
+		data[0]?.pot || 'No pot!',
 		'card-container__info',
 		'card-container__info-title',
 		'card-container__info-pot',
@@ -96,7 +95,7 @@ function renderCard(data = []) {
 	const extra =
 		extrasArr.length > 0
 			? extrasArr?.map(item => item.extra).join(', ')
-			: 'No extras';
+			: 'No extras!';
 	extrasContainer = createInfoContainer(
 		'Extras',
 		extra,
@@ -108,16 +107,16 @@ function renderCard(data = []) {
 	const containerCustomBtn = document.createElement('div');
 	containerCustomBtn.classList.add('containerCustomBtn');
 
-	const customBtn = document.createElement('button');
-	customBtn.classList.add('style-input');
+	// const customBtn = document.createElement('button');
+	// customBtn.classList.add('style-input');
 
-	const customEnlace = document.createElement('a');
-	customEnlace.textContent = 'Customize';
-	customEnlace.href = '././customize.html';
-	customEnlace.classList.add('customEnlace');
+	// const customEnlace = document.createElement('a');
+	// customEnlace.textContent = 'Customize';
+	// customEnlace.href = '././customize.html';
+	// customEnlace.classList.add('customEnlace');
 
-	containerCustomBtn.appendChild(customBtn);
-	customBtn.appendChild(customEnlace);
+	// containerCustomBtn.appendChild(customBtn);
+	// customBtn.appendChild(customEnlace);
 
 	currentCardContainer.appendChild(textRecomendationCard);
 	textRecomendationCard.append(

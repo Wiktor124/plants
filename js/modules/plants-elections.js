@@ -1,5 +1,4 @@
 import plantsQuestions from '../../config.js';
-// import renderImageRecomendation from '../components/recomendation.js';
 import { renderCard } from '../components/renderCardPlant.js';
 
 function plantElection(data) {
@@ -24,7 +23,6 @@ function plantElection(data) {
 	}
 
 	renderCard(plantRecomendation);
-	// renderImageRecomendation(plantRecomendation);
 	localStorage.setItem('recomendation', JSON.stringify(plantRecomendation));
 }
 

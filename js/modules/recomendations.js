@@ -26,7 +26,6 @@ const handleOptions = e => {
 		}
 	}
 
-	renderCard();
 	plantElection(elections);
 };
 
@@ -40,6 +39,7 @@ function init() {
 		.addEventListener('submit', handleOptions);
 
 	document.querySelector('.deleted').addEventListener('click', handleClear);
+	renderCard();
 }
 
 export default init;
