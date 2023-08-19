@@ -1,4 +1,4 @@
-import plantsQuestions from '../../config.js';
+import { plantsQuestions } from '../../config.js';
 import { renderCard } from '../components/renderCardPlant.js';
 
 function plantElection(data) {

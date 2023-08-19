@@ -26,14 +26,12 @@ function createInfoContainer(
 const cardPlantsDiv = document.getElementById('card-plants');
 
 function renderCard(data = []) {
-
 	if (!currentCardContainer) {
 		currentCardContainer = document.createElement('div');
 		currentCardContainer.classList.add('card-container');
 		cardPlantsDiv.appendChild(currentCardContainer);
 	}
 
-	console.log(data);
 	currentCardContainer.innerHTML = '';
 
 	const textPlants = document.createElement('p');
@@ -48,8 +46,10 @@ function renderCard(data = []) {
 	renderPlant.id = 'plant';
 	renderPlant.className = 'plant';
 
-	renderPlant.innerHTML = data.length !== 0 ? data.map(({ image }) => `<img src="${image}" alt="">`)
-		.join('') : '<h2 style="text-align: center; margin-top: 200px;">No PLant!</h2>';
+	renderPlant.innerHTML =
+		data.length !== 0
+			? data.map(item => `<img src="${item.image}" id="${Object.keys(item)[0]}-image" alt="">`).join('')
+			: '<h2 style="text-align: center; margin-top: 200px;">No PLant!</h2>';
 	const textRecomendationCard = document.createElement('div');
 	textRecomendationCard.className = 'card-container__textRecomendation';
 
@@ -107,16 +107,16 @@ function renderCard(data = []) {
 	const containerCustomBtn = document.createElement('div');
 	containerCustomBtn.classList.add('containerCustomBtn');
 
-	// const customBtn = document.createElement('button');
-	// customBtn.classList.add('style-input');
+	const customBtn = document.createElement('button');
+	customBtn.classList.add('style-input');
 
-	// const customEnlace = document.createElement('a');
-	// customEnlace.textContent = 'Customize';
-	// customEnlace.href = '././customize.html';
-	// customEnlace.classList.add('customEnlace');
+	const customEnlace = document.createElement('a');
+	customEnlace.textContent = 'Customize';
+	customEnlace.href = '././customize.html';
+	customEnlace.classList.add('customEnlace');
 
-	// containerCustomBtn.appendChild(customBtn);
-	// customBtn.appendChild(customEnlace);
+	containerCustomBtn.appendChild(customBtn);
+	customBtn.appendChild(customEnlace);
 
 	currentCardContainer.appendChild(textRecomendationCard);
 	textRecomendationCard.append(

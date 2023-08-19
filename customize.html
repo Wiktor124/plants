@@ -12,17 +12,17 @@
   <h2 class="container__h2">Customize your plant!</h2>
   <h3 class="container__h3">Choose your pot:</h3>
   <main class="main-container">
-    <form class="container__form">
+    <form id="customize" class="container__form">
       <h2 class="sr-only">Plant Recommendation Form</h2>
       <div>
         <p class="height-null">Pot material</p>
         <div class="container-option">
           <div class="container__input lateral-space">
-            <input type="radio" id="clay" name="material" required>
+            <input type="radio" id="clay" name="material" data-pot="clay" required>
             <label class="radio-label" for="clay">Clay</label>
           </div>
           <div class="container__input lateral-space">
-            <input type="radio" id="ceramic" name="material" required>
+            <input type="radio" id="ceramic" name="material" data-pot="ceramic" required>
             <label class="radio-label" for="ceramic">Ceramic</label>
           </div>
         </div>
@@ -30,7 +30,7 @@
       <div class="top-space">
         <p>Pot decoration:</p>
         <label class="switch">
-          <input type="checkbox">
+          <input type="checkbox" id="decoration">
           <span class="slider"></span>
         </label>
       </div>
@@ -42,19 +42,19 @@
         </label>
         <div id="container-colors" class="container-colors container-option">
           <div class="container__input blue">
-            <input type="radio" id="blue" name="colors" required>
+            <input type="radio" id="blue" name="colors" data-color="blue" required>
             <label class="radio-label" for="blue"></label>
           </div>
           <div class="container__input">
-            <input type="radio" id="red" name="colors" required>
-            <label class="radio-label" for="red"></label>
+            <input type="radio" id="pink" name="colors" data-color="pink" required>
+            <label class="radio-label" for="pink"></label>
           </div>
           <div class="container__input">
-            <input type="radio" id="green" name="colors" required>
+            <input type="radio" id="green" name="colors" data-color="green" required>
             <label class="radio-label" for="green"></label>
           </div>
           <div class="container__input">
-            <input type="radio" id="purple" name="colors" required>
+            <input type="radio" id="purple" name="colors" data-color="purple" required>
             <label class="radio-label" for="purple"></label>
           </div>
         </div>
@@ -62,43 +62,44 @@
       <div class="container--">
         <h3>Choose your soil:</h3>
         <div class="container__input">
-          <input type="radio" id="basic_soil" name="soil" required>
+          <input type="radio" id="basic_soil" name="soil" data-soil="composed_soil" required>
           <label class="radio-label" for="basic_soil">Basic Composted soil</label>
         </div>
         <div class="container__input">
-          <input type="radio" id="premium_soli" name="soil" required>
+          <input type="radio" id="premium_soli" name="soil" data-soil="premium_soli" required>
           <label class="radio-label" for="premium_soli">Premium fertilized soil</label>
         </div>
         <div class="container__input">
-          <input type="radio" id="easy_soil" name="soil" required>
+          <input type="radio" id="easy_soil" name="soil" data-soil="drainage_soil" required>
           <label class="radio-label" for="easy_soil">Esay drainage soil</label>
         </div>
       </div>
       <div class="custom-dropdown botton-space">
         <h3>Choose your plant:</h3>
-        <select>
-          <option>Aglaonema Silver Bay</option>
-          <option>Aloe Vera</option>
-          <option>Boston Fern</option>
-          <option>Cactus</option>
-          <option>Monstera Deliciosa</option>
-          <option>Peace Lily</option>
-          <option>Sansevieria</option>
+        <select id="plants-dropdown">
+          <option></option>
+          <option value="aglaonema_silver_bay">Aglaonema Silver Bay</option>
+          <option value="aloe_vera">Aloe Vera</option>
+          <option value="boston_fern">Boston Fern</option>
+          <option value="cactus">Cactus</option>
+          <option value="monstera">Monstera Deliciosa</option>
+          <option value="peace_lily">Peace Lily</option>
+          <option value="sansevieria">Sansevieria</option>
         </select>
         </span>
       </div>
       <div class="botton-space">
         <h3> Choose your Extras:</h3>
         <div class="container__input">
-          <input type="checkbox" id="extra_moss_pole" name="extra_elements" value="moss_pole">
+          <input type="checkbox" id="extra_moss_pole" name="extra_elements" data-extras="extra_elements" value="moss_pole">
           <label class="radio-label" for="extra_moss_pole">Moss pole</label>
         </div>
         <div class="container__input">
-          <input type="checkbox" id="extra_pebbles" name="extra_elements" value="pebbles">
+          <input type="checkbox" id="extra_pebbles" name="extra_elements" data-extras="extra_elements" value="pebbles">
           <label class="radio-label" for="extra_pebbles">Pebbles</label>
         </div>
         <div class="container__input">
-          <input type="checkbox" id="extra_smaller_plants" name="extra_elements" value="smaller_plants">
+          <input type="checkbox" id="extra_smaller_plants" name="extra_elements" data-extras="extra_elements" value="smaller_plants">
           <label class="radio-label" for="extra_smaller_plants">Smaller plants</label>
         </div>
       </div>

@@ -343,8 +343,8 @@ input:checked + .slider:before {
   background-color: blue;
 }
 
-#red + .radio-label:before,
-#red:checked + .radio-label:before {
+#pink + .radio-label:before,
+#pink:checked + .radio-label:before {
   background-color: red;
 }
 
