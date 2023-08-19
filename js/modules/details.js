@@ -1,8 +1,4 @@
-import { plantsConfig, potsConfig } from '../../config.js';
-import { renderCard } from '../components/renderCardPlant.js';
 import Publisher from '../publisher.js';
-const recomendation = JSON.parse(localStorage.getItem('recomendation')) || [];
-
 
 const ChangePotMaterial = new Publisher();
 const changeDecoration = new Publisher();

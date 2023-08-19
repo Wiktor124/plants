@@ -45,25 +45,43 @@ const potsConfig = {
 		},
 		purple: {
 			basic: {
-				pot: 'Clay simple pot purple',
+				pot: 'Clay simple purple',
 				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427982/samples/plants/clay-simple-purple_qemxax.png'
 			},
 			decorated: {
-				pot: 'Clay decorated pot purple',
+				pot: 'Clay decorated purple',
 				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427981/samples/plants/clay-decorated-purple_muvi8o.png'
 			}
 		},
 		pink: {
-			basic: '',
-			decorated: ''
+			basic: {
+				pot: 'Clay simple pink',
+				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427982/samples/plants/clay-simple-pink_ax38br.png'
+			},
+			decorated: {
+				pot: 'c',
+				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427981/samples/plants/clay-decorated-pink_ryys5w.png'
+			}
 		},
 		green: {
-			basic: '',
-			decorated: ''
+			basic: {
+				pot: 'Clay simple green',
+				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427985/samples/plants/clay-simple-green_hndtu4.png'
+			},
+			decorated: {
+				pot: 'Clay decorated green',
+				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427981/samples/plants/clay-decorated-green_bssmih.png'
+			}
 		},
 		blue: {
-			basic: '',
-			decorated: ''
+			basic: {
+				pot: 'Clay simple blue',
+				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427982/samples/plants/clay-simple-blue_vnzfdv.png'
+			},
+			decorated: {
+				pot: 'Clay decorated blue',
+				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1690692068/samples/plants/painted-clay-pot-decorated_eu1czn.png'
+			}
 		}
 	},
 
@@ -81,25 +99,43 @@ const potsConfig = {
 		},
 		purple: {
 			basic: {
-				pot: 'Purple',
+				pot: 'Ceramic simple Purple',
 				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427981/samples/plants/ceramic-simple-purple_niwofz.png',
 			},
 			decorated: {
-				pot: 'Purple decorated',
+				pot: 'Ceramic decorated blue',
 				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427984/samples/plants/ceramic-decorated-purple_ym6sum.png'
 			}
 		},
 		pink: {
-			basic: '',
-			decorated: ''
+			basic: {
+				pot: 'Ceramic simple pink',
+				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427983/samples/plants/ceramic-simple-pink_tprkgb.png'
+			},
+			decorated: {
+				pot: 'Ceramic decorated pink',
+				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1690692068/samples/plants/painted-ceramic-pot-decorated_ntqod0.png'
+			}
 		},
 		green: {
-			basic: '',
-			decorated: ''
+			basic: {
+				pot: 'Ceramic simple green',
+				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427983/samples/plants/ceramic-simple-green_gzkdfg.png'
+			},
+			decorated: {
+				pot: 'Ceramic decorated green',
+				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427982/samples/plants/ceramic-decorated-green_kbkxcg.png'
+			}
 		},
 		blue: {
-			basic: '',
-			decorated: ''
+			basic: {
+				pot: 'Ceramic simple blue',
+				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427983/samples/plants/ceramic-simple-blue_loxtam.png'
+			},
+			decorated: {
+				pot: 'Ceramic decorated blue',
+				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427983/samples/plants/ceramic-decorated-blue_a3bhas.png'
+			}
 		}
 	}
 }
@@ -118,6 +154,21 @@ const soilConfig = {
 		soil: 'Drainage Soil',
 		image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692431156/samples/plants/soil-drainage_ffxxsh.png'
 
+	}
+}
+
+const extraConfig = {
+	moss_pole: {
+		extra: 'Moss pole',
+		image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1690692068/samples/plants/moss-pole_h3iy1x.png'
+	},
+	pebbles: {
+		extra: 'Pebbles',
+		image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1690692069/samples/plants/pebbles_jz4rql.png'
+	},
+	smaller_plants: {
+		extra: 'Smaller plants',
+		image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1690692068/samples/plants/mini-plants_iytquu.png'
 	}
 }
 
@@ -244,4 +295,4 @@ const plantsQuestions = {
 	},
 };
 
-export { plantsQuestions, plantsConfig, potsConfig, soilConfig };
+export { plantsQuestions, plantsConfig, potsConfig, soilConfig, extraConfig};
