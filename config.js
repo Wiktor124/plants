@@ -10,12 +10,12 @@ const plantsConfig = {
 			'https://res.cloudinary.com/diplphrxm/image/upload/v1690692068/samples/plants/plant-sansevieria_mnhug8.png',
 	},
 	monstera: {
-		plant: 'Monstera',
+		plant: 'Monstera Delisiosa',
 		image:
 			'https://res.cloudinary.com/diplphrxm/image/upload/v1690692069/samples/plants/plant-monstera_zbntgh.png',
 	},
-	aglaonema: {
-		plant: 'Aglaonema',
+	aglaonema_silver_bay: {
+		plant: 'Aglaonema Silver Bay',
 		image:
 			'https://res.cloudinary.com/diplphrxm/image/upload/v1690692069/samples/plants/plant-aglaonema_gpsqr7.png',
 	},
@@ -29,33 +29,37 @@ const plantsConfig = {
 		image:
 			'https://res.cloudinary.com/diplphrxm/image/upload/v1690692069/samples/plants/plant-aloe_p4dp47.png',
 	},
+	peace_lily: {
+		plant: 'Peace Lily',
+		image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1690692070/samples/plants/plant-peace-lily_hiofo5.png'
+	}
 }
 
 const potsConfig = {
 	clay: {
 		unpainted: {
 			basic: {
-				pot: 'Simple clay pot',
+				pot: 'Simple clay',
 				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1690692067/samples/plants/simple-clay-pot_tqarrp.png'
 			},
 			decorated: {
-				pot: 'Simple clay pot decorated',
+				pot: 'Simple clay decorated',
 				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1690692067/samples/plants/simple-clay-pot-decorated_zj9vij.png'
 			},
 		},
 		purple: {
 			basic: {
-				pot: 'Clay simple purple',
+				pot: 'Clay simple',
 				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427982/samples/plants/clay-simple-purple_qemxax.png'
 			},
 			decorated: {
-				pot: 'Clay decorated purple',
+				pot: 'Clay decorated',
 				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427981/samples/plants/clay-decorated-purple_muvi8o.png'
 			}
 		},
 		pink: {
 			basic: {
-				pot: 'Clay simple pink',
+				pot: 'Clay simple',
 				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427982/samples/plants/clay-simple-pink_ax38br.png'
 			},
 			decorated: {
@@ -65,21 +69,21 @@ const potsConfig = {
 		},
 		green: {
 			basic: {
-				pot: 'Clay simple green',
+				pot: 'Clay simple',
 				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427985/samples/plants/clay-simple-green_hndtu4.png'
 			},
 			decorated: {
-				pot: 'Clay decorated green',
+				pot: 'Clay decorated',
 				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427981/samples/plants/clay-decorated-green_bssmih.png'
 			}
 		},
 		blue: {
 			basic: {
-				pot: 'Clay simple blue',
+				pot: 'Clay simple',
 				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427982/samples/plants/clay-simple-blue_vnzfdv.png'
 			},
 			decorated: {
-				pot: 'Clay decorated blue',
+				pot: 'Clay decorated',
 				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1690692068/samples/plants/painted-clay-pot-decorated_eu1czn.png'
 			}
 		}
@@ -88,52 +92,52 @@ const potsConfig = {
 	ceramic: {
 		unpainted: {
 			basic: {
-				pot: 'Simple ceramic pot',
+				pot: 'Simple ceramic',
 				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1690692067/samples/plants/simple-ceramic-pot_dbvcsf.png',
 			},
 			decorated: {
-				pot: 'Simple ceramic pot decorated',
+				pot: 'Simple ceramic decorated',
 				image:
 					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692067/samples/plants/simple-ceramic-pot-decorated_na2fre.png',
 			}
 		},
 		purple: {
 			basic: {
-				pot: 'Ceramic simple Purple',
+				pot: 'Ceramic simple',
 				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427981/samples/plants/ceramic-simple-purple_niwofz.png',
 			},
 			decorated: {
-				pot: 'Ceramic decorated blue',
+				pot: 'Ceramic decorated',
 				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427984/samples/plants/ceramic-decorated-purple_ym6sum.png'
 			}
 		},
 		pink: {
 			basic: {
-				pot: 'Ceramic simple pink',
+				pot: 'Ceramic simple',
 				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427983/samples/plants/ceramic-simple-pink_tprkgb.png'
 			},
 			decorated: {
-				pot: 'Ceramic decorated pink',
+				pot: 'Ceramic decorated',
 				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1690692068/samples/plants/painted-ceramic-pot-decorated_ntqod0.png'
 			}
 		},
 		green: {
 			basic: {
-				pot: 'Ceramic simple green',
+				pot: 'Ceramic simple',
 				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427983/samples/plants/ceramic-simple-green_gzkdfg.png'
 			},
 			decorated: {
-				pot: 'Ceramic decorated green',
+				pot: 'Ceramic decorated',
 				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427982/samples/plants/ceramic-decorated-green_kbkxcg.png'
 			}
 		},
 		blue: {
 			basic: {
-				pot: 'Ceramic simple blue',
+				pot: 'Ceramic simple',
 				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427983/samples/plants/ceramic-simple-blue_loxtam.png'
 			},
 			decorated: {
-				pot: 'Ceramic decorated blue',
+				pot: 'Ceramic decorated',
 				image: 'https://res.cloudinary.com/diplphrxm/image/upload/v1692427983/samples/plants/ceramic-decorated-blue_a3bhas.png'
 			}
 		}
@@ -175,124 +179,44 @@ const extraConfig = {
 const plantsQuestions = {
 	placement_question: {
 		inside_indirect: {
-			yes: {
-				plant: 'Boston Fern',
-				image:
-					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692070/samples/plants/plant-fern_cgsdit.png',
-			},
-			no: {
-				plant: 'Sansevieria',
-				image:
-					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692068/samples/plants/plant-sansevieria_mnhug8.png',
-			},
+			yes: plantsConfig.boston_fern,
+			no: plantsConfig.sansevieria,
 		},
 		inside_lot_indirect: {
-			yes: {
-				plant: 'Monstera',
-				image:
-					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692069/samples/plants/plant-monstera_zbntgh.png',
-			},
-			no: {
-				plant: 'Aglaonema',
-				image:
-					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692069/samples/plants/plant-aglaonema_gpsqr7.png',
-			},
+			yes: plantsConfig.monstera,
+			no: plantsConfig.aglaonema_silver_bay
 		},
 		outside: {
-			yes: {
-				plant: 'Cactus',
-				image:
-					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692069/samples/plants/plant-cactus_gntwe7.png',
-			},
-			no: {
-				plant: 'Aloe Vera',
-				image:
-					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692069/samples/plants/plant-aloe_p4dp47.png',
-			},
+			yes: plantsConfig.cactus,
+			no: plantsConfig.aloe_vera,
 		},
 	},
 	sunlight_question: {
-		yes: {
-			soil: 'Composted soil',
-			image:
-				'https://res.cloudinary.com/diplphrxm/image/upload/v1690692067/samples/plants/soil-composted_qgfr4w.png',
-		},
-		no: {
-			soil: 'Fertilized soil',
-			image:
-				'https://res.cloudinary.com/diplphrxm/image/upload/v1690692068/samples/plants/soil-fertilized_mb43lu.png',
-		},
+		yes: soilConfig.composed_soil,
+		no: soilConfig.drainage_soil,
 	},
 	watering_question: {
 		overwater: {
-			minimalism: {
-				pot: 'Simple clay pot',
-				image:
-					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692067/samples/plants/simple-clay-pot_tqarrp.png',
-			},
-			simple_colors: {
-				pot: 'Simple clay pot decorated',
-				image:
-					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692067/samples/plants/simple-clay-pot-decorated_zj9vij.png',
-			},
-			bright_colors: {
-				pot: 'Painted clay pot decorated',
-				image:
-					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692068/samples/plants/painted-clay-pot-decorated_eu1czn.png',
-			},
+			minimalism: potsConfig.clay.unpainted.basic,
+			simple_colors: potsConfig.clay.unpainted.decorated,
+			bright_colors: potsConfig.clay.pink.decorated,
 		},
 		underwater: {
-			minimalism: {
-				pot: 'Simple ceramic pot',
-				image:
-					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692067/samples/plants/simple-ceramic-pot_dbvcsf.png',
-			},
-			simple_colors: {
-				pot: 'Simple pot decorated',
-				image:
-					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692067/samples/plants/simple-ceramic-pot-decorated_na2fre.png',
-			},
-			bright_colors: {
-				pot: 'Painted pot decorated',
-				image:
-					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692068/samples/plants/painted-ceramic-pot-decorated_ntqod0.png',
-			},
+			minimalism: potsConfig.ceramic.unpainted.basic,
+			simple_colors: potsConfig.ceramic.unpainted.decorated,
+			bright_colors: potsConfig.ceramic.pink.decorated,
 		},
 		neither: {
-			minimalism: {
-				pot: 'Simple ceramic pot',
-				image:
-					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692067/samples/plants/simple-ceramic-pot_dbvcsf.png',
-			},
-			simple_colors: {
-				pot: 'Simple pot decorated',
-				image:
-					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692067/samples/plants/simple-ceramic-pot-decorated_na2fre.png',
-			},
-			bright_colors: {
-				pot: 'Painted pot decorated',
-				image:
-					'https://res.cloudinary.com/diplphrxm/image/upload/v1690692068/samples/plants/painted-ceramic-pot-decorated_ntqod0.png',
-			},
+			minimalism: potsConfig.ceramic.unpainted.basic,
+			simple_colors: potsConfig.ceramic.unpainted.decorated,
+			bright_colors: potsConfig.ceramic.pink.decorated,
 		},
 	},
 	extra_elements: {
-		moss_pole: {
-			extra: 'Moss pole',
-			image:
-				'https://res.cloudinary.com/diplphrxm/image/upload/v1690692068/samples/plants/moss-pole_h3iy1x.png',
-		},
-		pebbles: {
-			extra: 'Pebbles',
-			image:
-				'https://res.cloudinary.com/diplphrxm/image/upload/v1690692069/samples/plants/pebbles_jz4rql.png',
-		},
-		smaller_plants: {
-			extra: 'Mini Plants',
-			image:
-				'https://res.cloudinary.com/diplphrxm/image/upload/v1690692068/samples/plants/mini-plants_iytquu.png',
-		},
+		moss_pole: extraConfig.moss_pole,
+		pebbles: extraConfig.pebbles,
+		smaller_plants: extraConfig.smaller_plants,
 	},
 };
 
-export { plantsQuestions, plantsConfig, potsConfig, soilConfig, extraConfig};
+export { plantsQuestions, plantsConfig, potsConfig, soilConfig, extraConfig };

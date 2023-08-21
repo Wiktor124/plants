@@ -18,23 +18,31 @@ function potDecoration(detail) {
 }
 
 function potColor(detail) {
+  document.querySelector('#pot-image').src = detail.image;
   document.querySelector('.card-container__info-pot').textContent = detail.pot;
-  document.querySelector('#pot-image').src = detail?.image;
+  document.querySelector('.card-container__info-color').textContent = detail.color;
+
 }
 
 function soil(detail) {
-  document.querySelector('#soil-image').src = detail?.image;
+  document.querySelector('#soil-image').src = detail.image;
   document.querySelector('.card-container__info-soil').textContent = detail.soil;
 }
 
 function plant(detail) {
-  document.querySelector('#plant-image').src = detail?.image;
+  document.querySelector('.card-container__title').textContent = detail.plant;
+  document.querySelector('#plant-image').src = detail.image;
+  document.querySelector('.card-container__info-name').textContent = detail.plant;
 
 }
 
-function extras(...details) {
+function extras(details) {
+  const checkboxes = Array.from(document.querySelectorAll('[data-extra="extras"]'));
 
-  console.log(details);
+  const matchingIds = details
+    .filter(detail => checkboxes.some(checkbox => checkbox.id === detail.id))
+    .map(detail => detail.id);
+  console.log(matchingIds, details)
 }
 
 changeDecoration.subscribe(potDecoration);

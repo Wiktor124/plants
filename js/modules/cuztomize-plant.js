@@ -1,6 +1,7 @@
 import { renderCard } from '../components/renderCardPlant.js';
-import { plantsConfig, potsConfig, soilConfig } from '../../config.js';
+import { extraConfig, plantsConfig, potsConfig, soilConfig } from '../../config.js';
 import { ChangePotMaterial, changeDecoration, changeExtas, changePlant, changePotColor, changeSoil } from './details.js';
+
 const recomendation = JSON.parse(localStorage.getItem('recomendation')) || [];
 const flag = false;
 
@@ -11,6 +12,7 @@ let color = '';
 let clayMaterial = 'clay';
 let ceramicMaterial = 'ceramic';
 let material = clayMaterial;
+const extras = [];
 
 function handlePlantsDropdown(e) {
   const selectedPlant = e.target.value;
@@ -30,7 +32,8 @@ function handleCustomizingPlant(e) {
     const decoration = potDecoration ? 'decorated' : 'basic';
 
     if (showPotContainer && potColor) {
-      return changePotColor.publish(potsConfig[material][color][decoration]);
+      const thisPotColor = potsConfig[material][color][decoration];
+      return changePotColor.publish({ ...thisPotColor, color: color });
     } else if (potDecoration) {
       return changeDecoration.publish(potsConfig[material]?.unpainted[decoration]);
     }
@@ -38,31 +41,29 @@ function handleCustomizingPlant(e) {
     ChangePotMaterial.publish(potsConfig[dataset.pot]?.unpainted.basic)
   }
 
-  if (target.matches('#decoration')) {
+  if (target.matches('#decorated')) {
     potDecoration = !potDecoration;
 
     const decoration = potDecoration ? 'decorated' : 'basic';
 
     if (showPotContainer && potColor) {
+      const thisPotColor = potsConfig[material][color][decoration];
 
-      return changePotColor.publish(potsConfig[material][color][decoration]);
+      return changePotColor.publish({ ...thisPotColor, color: color });
     }
-
 
     changeDecoration.publish(potsConfig[material]?.unpainted[decoration]);
   }
-  
+
   if (dataset.container) {
     showPotContainer = !showPotContainer;
 
     const potColorsContainer = document.querySelector(`#${dataset.container}`);
     const decoration = potDecoration ? 'decorated' : 'basic';
-    
-    if(!showPotContainer) {
 
-      changePotColor.publish(potsConfig[material]?.unpainted[decoration]);
-      // target.checked = false;
-      console.log(target.checked);
+    if (!showPotContainer) {
+      const thisPotColor = potsConfig[material].unpainted[decoration];
+      changePotColor.publish({ ...thisPotColor, color: color });
     }
 
     potColorsContainer.style.display = showPotContainer ? 'flex' : 'none';
@@ -72,7 +73,8 @@ function handleCustomizingPlant(e) {
     potColor = true;
     color = dataset.color;
     const decoration = potDecoration ? 'decorated' : 'basic';
-    changePotColor.publish(potsConfig[material][dataset.color][decoration]);
+    const thisPotColor = potsConfig[material][dataset.color][decoration];
+    changePotColor.publish({ ...thisPotColor, color: color });
   }
 
   if (dataset?.soil) {
@@ -80,11 +82,20 @@ function handleCustomizingPlant(e) {
   }
 
   if (dataset?.extras) {
-    changeExtas.publish(target.value)
+
+    const extraIndex = extras.findIndex(extra => extra === target.value);
+
+    if (extraIndex >= 0) {
+      extras.splice(extraIndex, 1);
+    } else {
+      extras.push(target.value);
+    }
+    const id = target.id;
+
+    changeExtas.publish(extras.map(item => ({ ...extraConfig[item], id })));
   }
 
   localStorage.setItem('recomendation', JSON.stringify(recomendation));
-  // renderCard(recomendation)
 }
 
 function initCustomization() {
