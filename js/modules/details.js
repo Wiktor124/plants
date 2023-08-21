@@ -37,12 +37,7 @@ function plant(detail) {
 }
 
 function extras(details) {
-  const checkboxes = Array.from(document.querySelectorAll('[data-extra="extras"]'));
-
-  const matchingIds = details
-    .filter(detail => checkboxes.some(checkbox => checkbox.id === detail.id))
-    .map(detail => detail.id);
-  console.log(matchingIds, details)
+  document.querySelector('#extras-container').innerHTML = details.map(({ image }) => `<img src="${image}">`).join('')
 }
 
 changeDecoration.subscribe(potDecoration);

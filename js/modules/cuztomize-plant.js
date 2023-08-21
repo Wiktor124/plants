@@ -90,9 +90,8 @@ function handleCustomizingPlant(e) {
     } else {
       extras.push(target.value);
     }
-    const id = target.id;
 
-    changeExtas.publish(extras.map(item => ({ ...extraConfig[item], id })));
+    changeExtas.publish(extras.map(item => extraConfig[item]));
   }
 
   localStorage.setItem('recomendation', JSON.stringify(recomendation));
