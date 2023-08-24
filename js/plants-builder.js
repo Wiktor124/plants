@@ -1,15 +1,36 @@
 class PlantsBuilder {
-	constructor() {
-		this.plant = {};
+
+	setPot(pot) {
+		if (pot) {
+			this.pot = pot;
+
+			return this;
+		}
 	}
 
-	addAttribute(attrName) {
-		this[attrName] = value => {
-			if (value) {
-				this.plant[attrName] = value;
-				return this.plant;
-			}
-		};
+	setSoil(soil) {
+		if (soil) {
+			this.soil = soil;
+
+			return this;
+		}
+
+	}
+
+	setPlant(plant) {
+		if (plant) {
+			this.plant = plant;
+
+			return this;
+		}
+	}
+
+	setExtras(extras) {
+		if (extras) {
+			this.extras = extras;
+
+			return this;
+		}
 	}
 }
 

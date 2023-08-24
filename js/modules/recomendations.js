@@ -1,32 +1,35 @@
 import PlantsBuilder from '../plants-builder.js';
 import { renderCard } from '../components/renderCardPlant.js';
-import plantElection from './plants-elections.js';
-const plantsForm = [...document.querySelector('#plantForm')];
+import { plantsQuestions } from '../../config.js';
 
-let elections;
+const dataForm = document.querySelector('#plantForm')
+
 const handleOptions = e => {
 	e.preventDefault();
-	const plant = new PlantsBuilder();
-	const methods = [];
-	const extraElements = [];
+	const recomendation = [];
 
-	for (let i = 0; i < plantsForm.length; i++) {
-		if (plantsForm[i].checked) {
-			methods.push(plantsForm[i].name);
+	const placement = new FormData(dataForm).get('placement');
+	const sunlight = new FormData(dataForm).get('sunlight');
+	const pets = new FormData(dataForm).get('pets');
+	const watering = new FormData(dataForm).get('watering');
+	const style = new FormData(dataForm).get('style');
+	const extras = new FormData(dataForm).getAll('extra_elements');
 
-			methods.forEach(attr => plant.addAttribute(attr));
+	const plant = new PlantsBuilder()
+		.setPot(plantsQuestions.watering_question[watering][style])
+		.setSoil(plantsQuestions.sunlight_question[sunlight])
+		.setPlant(plantsQuestions.placement_question[placement][pets]);
 
-			elections = plant[plantsForm[i].name](plantsForm[i].value);
-
-			if (elections?.extra_elements) {
-				extraElements.push(elections.extra_elements);
-
-				elections.extra_elements = extraElements;
-			}
-		}
+	if (extras.length > 0) {
+		const extraElement = extras.map(item => plantsQuestions.extra_elements[item]);
+		plant.setExtras(extraElement)
 	}
 
-	plantElection(elections);
+	for (const key in plant) {
+		recomendation.push(plant[key]);
+	}
+
+	renderCard(recomendation)
 };
 
 const handleClear = () => {
@@ -34,12 +37,12 @@ const handleClear = () => {
 };
 
 function init() {
+	renderCard();
 	document
 		.querySelector('#plantForm')
 		.addEventListener('submit', handleOptions);
 
 	document.querySelector('.deleted').addEventListener('click', handleClear);
-	renderCard();
 }
 
 export default init;
