@@ -6,7 +6,9 @@
 	"scripts": {
 		"sass": "sass --watch styles/sass:styles/css",
 		"lint": "eslint --fix . --ext .js",
-		"format": "prettier --write \"**/*.js\" \"**/*.scss\""
+		"format": "prettier --write \"**/*.js\" \"**/*.scss\"",
+		"dev": "vite",
+    "build": "vite build"
 	},
 	"repository": {
 		"type": "git",
@@ -24,7 +26,8 @@
 		"eslint-config-prettier": "^8.9.0",
 		"eslint-plugin-prettier": "^5.0.0",
 		"prettier": "^3.0.0",
-		"sass": "^1.64.2"
+		"sass": "^1.64.2",
+		"vite": "^4.4.9"
 	},
 	"dependencies": {
 		"cloudinary": "^1.40.0",
