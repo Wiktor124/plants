@@ -45,3 +45,21 @@ npm run format
 ```
 
 This will apply the formatting rules set by Prettier to the JavaScript files and adjust them according to conventions.
+
+
+- Bundle
+
+To regenerated dist folder:
+  
+Copy code
+
+```bash
+npm run build
+```
+To run as developer:
+
+Copy code
+
+```bash
+npm run dev
+```
