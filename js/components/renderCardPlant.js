@@ -46,23 +46,28 @@ function renderCard(data = []) {
 	renderPlant.id = 'plant';
 	renderPlant.className = 'plant';
 
-	const extrasImages = document.createElement('div')
+	const extrasImages = document.createElement('div');
 	extrasImages.id = 'extras-container';
 	renderPlant.innerHTML =
 		data.length !== 0
-			? data.map(item => {
-				if (Object.keys(item)[0] !== 'extra') {
-
-					return `<img src="${item.image}" id="${Object.keys(item)[0]}-image">`
-				} else {
-					extrasImages.innerHTML += `<img src="${item.image}" id="${Object.keys(item)[0]}-image">`
-				}
-			}).join('')
+			? data
+					.map(item => {
+						if (Object.keys(item)[0] !== 'extra') {
+							return `<img src="${item.image}" id="${
+								Object.keys(item)[0]
+							}-image">`;
+						} else {
+							extrasImages.innerHTML += `<img src="${item.image}" id="${
+								Object.keys(item)[0]
+							}-image">`;
+						}
+					})
+					.join('')
 			: '<h2 style="text-align: center; margin-top: 200px;">No PLant!</h2>';
 	const textRecomendationCard = document.createElement('div');
 	textRecomendationCard.className = 'card-container__textRecomendation';
 
-	renderPlant.appendChild(extrasImages)
+	renderPlant.appendChild(extrasImages);
 	currentCardContainer.append(
 		textPlants,
 		tituloPlants,

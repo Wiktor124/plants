@@ -2,11 +2,11 @@ import PlantsBuilder from '../plants-builder.js';
 import { renderCard } from '../components/renderCardPlant.js';
 import { plantsQuestions } from '../../config.js';
 
-const dataForm = document.querySelector('#plantForm')
+const dataForm = document.querySelector('#plantForm');
 
 const handleOptions = e => {
 	e.preventDefault();
-	const recomendation = [];
+	const selectedPlant = [];
 
 	const placement = new FormData(dataForm).get('placement');
 	const sunlight = new FormData(dataForm).get('sunlight');
@@ -21,15 +21,22 @@ const handleOptions = e => {
 		.setPlant(plantsQuestions.placement_question[placement][pets]);
 
 	if (extras.length > 0) {
-		const extraElement = extras.map(item => plantsQuestions.extra_elements[item]);
-		plant.setExtras(extraElement)
+		const extraElement = extras.map(
+			item => plantsQuestions.extra_elements[item],
+		);
+		plant.setExtras(extraElement);
 	}
 
 	for (const key in plant) {
-		recomendation.push(plant[key]);
+		selectedPlant.push(plant[key]);
 	}
 
-	renderCard(recomendation)
+	const recomendation = selectedPlant.flatMap(item =>
+		Array.isArray(item) ? item : [item],
+	);
+	
+	renderCard(recomendation);
+	localStorage.setItem('recomendation', JSON.stringify(recomendation));
 };
 
 const handleClear = () => {

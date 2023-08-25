@@ -1,5 +1,4 @@
 class PlantsBuilder {
-
 	setPot(pot) {
 		if (pot) {
 			this.pot = pot;
@@ -14,7 +13,6 @@ class PlantsBuilder {
 
 			return this;
 		}
-
 	}
 
 	setPlant(plant) {
